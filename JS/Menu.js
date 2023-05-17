@@ -13,7 +13,7 @@ const list = document.querySelectorAll(".list");
             toggleMenu.classList.toggle('active')
         }
 
-const API_KEY = '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'
+const API_KEY = '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'
 const submitButton = document.querySelector('#submit')
 const outPutElement = document.querySelector('#output')
 const inputElement = document.querySelector('input')
@@ -47,7 +47,7 @@ async function getMessage() {
         outPutElement.textContent = data.choices[0].message.content
         if(data.choices[0].message.content && inputElement.value){
             const pElement = document.createElement('p')
-            pElement.textContent = inputElement.value
+            pElement.textContent = inputElement.valuelo
             pElement.addEventListener('click', () => changeInput(pElement.textContent))
             historyElement.append(pElement)
         }
@@ -57,11 +57,11 @@ async function getMessage() {
     }
 }
 
-submitButton.addEventListener('click', getMessage)
+// submitButton.addEventListener('click', getMessage)
 
-function clearInput() {
+// function clearInput() {
 
-    inputElement.value = ''
-}
+//     inputElement.value = ''
+// }
 
-buttonElement.addEventListener('click', clearInput)
+// buttonElement.addEventListener('click', clearInput)
